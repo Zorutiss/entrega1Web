@@ -17,3 +17,33 @@ nav{
     
 
 }
+.logoNavBar h1{
+    margin: 0;
+    
+}
+.busqueda {
+    display: flex;
+    align-items: center;
+}
+.busqueda input{
+  padding: 6px 10px;
+  border: none;
+  border-radius: 10px;
+}
+.busqueda button{
+  margin-left: 6px;
+  padding: 4px 15px;
+  border: none;
+  background-color: #701F11;
+  cursor: pointer;
+}
+
+.busqueda button:hover {
+  background-color: #3E1109;
+}
+
+/* Para que el resto del contenido no quede oculto bajo la barra */
+body {
+  margin: 0;
+  padding-top: 70px; /* espacio del alto aproximado del navbar */
+}

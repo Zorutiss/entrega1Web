@@ -29,7 +29,7 @@ export default function Navbar(){
         <form className = "busqueda" onSubmit={handleSubmit}>
         <input
             type = "text"
-            placeholder = "Introduce el nombre de una película"
+            placeholder = "Nombre de película"
             value = {textoBusqueda}
             onChange = {handleChange}
         />
