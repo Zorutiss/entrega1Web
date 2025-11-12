@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import './Navbar.css'
 export default function Navbar(){
 
     //React vigila cuando cambia
@@ -12,7 +12,7 @@ export default function Navbar(){
 
     //Funcion que maneja el envio del formulario
     const handleSubmit = (event) => {
-        
+
         //Bloqueamos que el navegador actualice la pagina
         event.preventDefault();
         

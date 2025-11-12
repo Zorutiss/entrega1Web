@@ -1,0 +1,19 @@
+nav{
+    /*
+    Fijamos siempre la barra de busqueda
+    en la parte superior y los elementos en horizontal
+    */
+    position: fixed;
+    display: flex;
+    top: 0;
+    left:0;
+
+    width: 100%;
+    background-color: #09090B;
+
+    align-items: center;
+    justify-content: space-between;
+    
+    
+
+}
