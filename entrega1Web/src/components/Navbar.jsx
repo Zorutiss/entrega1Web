@@ -2,10 +2,11 @@ import {} from 'react'
 
 export default function Navbar(){
 
-    return(<nav>
+    return(
+    <nav>
          <ul>
             <li>BUSCAR: </li>
-    </ul>
+        </ul>
     </nav>  
     )
    
