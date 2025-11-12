@@ -2,15 +2,20 @@ import {useState} from 'react'
 
 export default function Navbar(){
 
-    
+    //React vigila cuando cambia
     const [textoBusqueda, setTextoBusqueda] = useState("");
 
+    //Funcion que maneja el evento cuando el usuario mete inputs en la barra de busqueda
     const handleChange = (event) => {
         setTextoBusqueda(event.target.value);
     }
 
+    //Funcion que maneja el envio del formulario
     const handleSubmit = (event) => {
+        
+        //Bloqueamos que el navegador actualice la pagina
         event.preventDefault();
+        
         console.log("Texto buscado:", textoBusqueda);
     }
 
