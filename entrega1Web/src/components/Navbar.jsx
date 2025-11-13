@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import './Navbar.css'
-export default function Navbar(){
+export default function Navbar({onSearch}){
 
     //React vigila cuando cambia
     const [textoBusqueda, setTextoBusqueda] = useState("");
@@ -16,7 +16,12 @@ export default function Navbar(){
         //Bloqueamos que el navegador actualice la pagina
         event.preventDefault();
         
+        //Mostramos por consola la busqueda
         console.log("Texto buscado:", textoBusqueda);
+        //Evitamos busquedas que provoquen problemas
+        if (textoBusqueda.trim() !== ""){
+            onSearch(textoBusqueda);
+        }
     }
 
     return(
