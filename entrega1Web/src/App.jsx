@@ -36,9 +36,11 @@ function App() {
         <div className = "Results">
           {results.map(show => (
             <div key={show.id} className='show-card'>
-                <h2>{show.name}</h2>
+                
                 {show.image && <img src={show.image.medium} alt={show.name} />}
-                <p dangerouslySetInnerHTML={{__html: show.summary}}></p>
+                <h2>{show.name}</h2>
+                <p>{show.summary?.replace(/<[^>]*>/g, "")}</p>
+                
             </div>
           ))}
         </div>
