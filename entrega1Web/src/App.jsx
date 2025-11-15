@@ -75,6 +75,13 @@ function App() {
 
             {show.image && <img src={show.image.medium} alt={show.name} />}
             <h2>{show.name}</h2>
+            {show.summary && (
+        <div
+          className="summary"
+          dangerouslySetInnerHTML={{ __html: show.summary }}
+        />
+      )}
+
             <button onClick={() => addToList(show)}>Añadir a Mi Lista</button>
           </div>
         ))}
