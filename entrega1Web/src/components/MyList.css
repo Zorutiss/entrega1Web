@@ -1,4 +1,6 @@
-.end-list{
-        background-color: #09090B;
-
-}
+.end-list h2 {
+  border-top: 7px solid #3E1109;
+  margin-top: 20px;
+  padding-top: 10px;
+  text-align: center;
+}   

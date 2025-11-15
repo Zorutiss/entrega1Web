@@ -19,11 +19,13 @@ export default function MyList({ myList, removeFromList }) {
               Eliminar
             </button>
           </div>
-            <div className="end-list">
-                <h2>prueba</h2>
-            </div>
         </div>
+        
       ))}
+      <div className="end-list">
+                <h2></h2>
+            </div>
     </div>
+    
   );
 }
