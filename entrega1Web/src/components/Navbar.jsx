@@ -28,13 +28,17 @@ export default function Navbar({onSearch}){
     <nav>
         <div className = "logoNavBar">
             <h1>TV Maze</h1>
+            
         </div>
         
+        <div className = "listaButton">
+            <button>Mi Lista</button>
+        </div>
 
         <form className = "busqueda" onSubmit={handleSubmit}>
         <input
             type = "text"
-            placeholder = "Nombre de película"
+            placeholder = "Nombre de serie"
             value = {textoBusqueda}
             onChange = {handleChange}
         />
