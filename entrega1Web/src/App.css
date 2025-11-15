@@ -55,4 +55,14 @@ h2{
     font-size: 45px;
 }
 
+.addListButton{
+  font-family: 'Lexend', sans-serif;
+    font-size: 20px;
+}
+
+.Results{
+  display: flex;
+  flex-direction: column; 
+  gap: 80px;              
+}
 

@@ -82,7 +82,8 @@ function App() {
         />
       )}
 
-            <button onClick={() => addToList(show)}>Añadir a Mi Lista</button>
+            <button className='addListButton' onClick={() => addToList(show)}>Añadir a Mi Lista</button>
+           
           </div>
         ))}
       </div>
