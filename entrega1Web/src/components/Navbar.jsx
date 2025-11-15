@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import './Navbar.css'
-export default function Navbar({onSearch}){
+import MyList from './MyList.jsx'
+export default function Navbar({onSearch, onToggleList}){
 
     //React vigila cuando cambia
     const [textoBusqueda, setTextoBusqueda] = useState("");
@@ -32,7 +33,7 @@ export default function Navbar({onSearch}){
         </div>
         
         <div className = "listaButton">
-            <button>Mi Lista</button>
+            <button onClick = {onToggleList}>Mi Lista</button>
         </div>
 
         <form className = "busqueda" onSubmit={handleSubmit}>
