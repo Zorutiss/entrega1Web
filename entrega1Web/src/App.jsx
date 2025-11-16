@@ -82,6 +82,24 @@ function App() {
           </div> 
         ))}
       </div>
+      
+     {selectedShow && (
+      <div className="modal-overlay" onClick={() => setSelectedShow(null)}>
+        <div className="modal" onClick={(event) => event.stopPropagation()}>
+          <h2>{selectedShow.name}</h2>
+          {selectedShow.image && (
+            <img src = {selectedShow.image.medium} alt = {selectedShow.Show.name}></img>
+          )}
+          
+        </div>
+      
+      
+      
+      </div>
+
+     )}
+  
+
     </div>
   )
 }
