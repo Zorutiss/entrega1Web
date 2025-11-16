@@ -4,3 +4,40 @@
   padding-top: 10px;
   text-align: center;
 }   
+
+.list-container {
+  text-align: center;
+}
+
+.Lista {
+  margin-bottom: 25px;
+  font-size: 45px;
+  font-family: 'Lexend', sans-serif;
+}
+
+.list-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.list-item img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.list-item button {
+  margin-top: 10px;
+  background-color: #701F11;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  cursor: pointer;
+  font-family: 'Lexend', sans-serif;
+}
+
+.list-item button:hover {
+  background-color: #3E1109;
+}
