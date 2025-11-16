@@ -7,6 +7,7 @@ function App() {
 
   //Para almacenar el resultado de la API
   const [results, setResults] = useState([]);
+  //Para usar el dialog para mostrar la información de la serie al hacer click
   const [selectedShow, setSelectedShow] = useState(null);
 
   
@@ -73,18 +74,12 @@ function App() {
         {results.map(show => (
           <div key={show.id} className='show-card'>
 
-            {show.image && <img src={show.image.medium} alt={show.name} />}
+            {show.image && <img src={show.image.medium} alt={show.name} 
+            //Para poder ver la info de la serie
+            onClick={() => setSelectedShow(show)}
+            />}
             <h2>{show.name}</h2>
-            {show.summary && (
-        <div
-          className="summary"
-          dangerouslySetInnerHTML={{ __html: show.summary }}
-        />
-      )}
-
-            <button className='addListButton' onClick={() => addToList(show)}>Añadir a Mi Lista</button>
-           
-          </div>
+          </div> 
         ))}
       </div>
     </div>

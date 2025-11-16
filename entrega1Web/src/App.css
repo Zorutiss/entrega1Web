@@ -63,6 +63,50 @@ h2{
 .Results{
   display: flex;
   flex-direction: column; 
-  gap: 80px;              
+  gap: 80px;            
 }
 
+.Results img{
+  cursor: pointer;
+}
+
+/* Tarjetas de resultados */
+.show-card {
+  margin-bottom: 20px;
+}
+
+.show-card img {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #111;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.summary {
+  text-align: justify;
+  margin: 15px 0;
+}
