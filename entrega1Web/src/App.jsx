@@ -7,23 +7,22 @@ function App() {
 
   //Para almacenar el resultado de la API
   const [results, setResults] = useState([]);
-  //Para usar el dialog para mostrar la información de la serie al hacer click
+  //Necesario para usar el overlay para mostrar la información de la serie al hacer click
   const [selectedShow, setSelectedShow] = useState(null);
 
   
-  //Creación de la lista
-  const [myList, setMyList] = useState([]);
+  
   //Mostrar u ocultar el panel Mi Lista
   const [showListPanel, setShowListPanel] = useState(false);
 
 
-  //Cargar la lista desde localStorage
-  useEffect(() => {
-    const storedList = localStorage.getItem("myList");
-    if (storedList) {
-      setMyList(JSON.parse(storedList));
-    }
-  }, []);
+  //Creación de la lista
+  
+  const [myList, setMyList] = useState(() => {
+    const stored = localStorage.getItem("myList");
+    return stored ? JSON.parse(stored) : [];
+    });
+
   //Guardar cambios en localStorage
   useEffect(() => {
     localStorage.setItem("myList", JSON.stringify(myList));
@@ -83,21 +82,29 @@ function App() {
         ))}
       </div>
       
-     {selectedShow && (
-      <div className="modal-overlay" onClick={() => setSelectedShow(null)}>
-        <div className="modal" onClick={(event) => event.stopPropagation()}>
-          <h2>{selectedShow.name}</h2>
-          {selectedShow.image && (
-            <img src = {selectedShow.image.medium} alt = {selectedShow.Show.name}></img>
-          )}
-          
-        </div>
-      
-      
-      
-      </div>
 
-     )}
+
+    {selectedShow && (
+  <div className="modal-overlay" onClick={() => setSelectedShow(null)}>
+    <div className="modal" onClick={(event) => event.stopPropagation()}>
+      <h2>{selectedShow.name}</h2>
+
+      {selectedShow.image && (
+        <img src={selectedShow.image.medium} alt={selectedShow.name} />
+      )}
+
+      {selectedShow.summary && (
+        <div className="summary" dangerouslySetInnerHTML={{ __html: selectedShow.summary }} />
+      )}
+
+      <div className="modal-buttons">
+        <button onClick={() => addToList(selectedShow)}>Añadir a Mi Lista</button>
+        <button onClick={() => setSelectedShow(null)}>Cerrar</button>
+      </div>
+    </div>
+  </div>
+)}
+
   
 
     </div>

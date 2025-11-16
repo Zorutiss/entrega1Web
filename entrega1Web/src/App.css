@@ -70,7 +70,7 @@ h2{
   cursor: pointer;
 }
 
-/* Tarjetas de resultados */
+/*IMÁGENES DE LAS SERIES*/
 .show-card {
   margin-bottom: 20px;
 }
@@ -80,7 +80,7 @@ h2{
   border-radius: 8px;
 }
 
-/* Modal */
+/*OVERLAY*/
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -92,10 +92,10 @@ h2{
 }
 
 .modal {
-  background: #111;
+  background: #09090B;
   color: #fff;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   max-width: 600px;
   width: 90%;
 }
@@ -105,8 +105,23 @@ h2{
   border-radius: 6px;
   margin-bottom: 15px;
 }
-
-.summary {
-  text-align: justify;
-  margin: 15px 0;
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  
 }
+
+.modal-buttons button {
+  padding: 6px 15px;
+  border: none;
+  background-color: #701F11;
+  cursor: pointer;
+  font-family: 'Lexend', sans-serif;
+  font-size: 16px;
+}
+
+.modal-buttons button:hover {
+  background-color: #3E1109;
+}
+
