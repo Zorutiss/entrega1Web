@@ -60,11 +60,13 @@ h2{
     font-size: 20px;
 }
 
-.Results{
-  display: flex;
-  flex-direction: column; 
-  gap: 80px;            
+.Results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
 }
+
 
 .Results img{
   cursor: pointer;

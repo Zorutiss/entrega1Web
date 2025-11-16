@@ -17,7 +17,6 @@ function App() {
 
 
   //Creación de la lista
-  
   const [myList, setMyList] = useState(() => {
     const stored = localStorage.getItem("myList");
     return stored ? JSON.parse(stored) : [];
